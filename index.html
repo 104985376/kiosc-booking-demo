@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>KIOSC Book A Program - Test Website</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<header class="topbar">
+  <div class="logo">KI<span></span>SC</div>
+  <button class="home-btn">Return Home</button>
+</header>
+
+<main class="page">
+  <h1>Book A Program</h1>
+
+  <div class="test-banner">
+    This is a test website for team demonstration purposes only.
+  </div>
+
+  <section class="booking-box">
+
+    <div class="stepper">
+      <div class="step active"><b>1</b><span>1. Select Program</span></div>
+      <div class="line"></div>
+      <div class="step"><b>2</b><span>2. Booking Details</span></div>
+      <div class="line"></div>
+      <div class="step"><b>3</b><span>3. Organisation</span></div>
+      <div class="line"></div>
+      <div class="step"><b>4</b><span>4. Contact Person</span></div>
+      <div class="line"></div>
+      <div class="step"><b>5</b><span>5. Message</span></div>
+    </div>
+
+    <!-- STEP 1 -->
+    <section id="step1" class="form-step active">
+      <h2>1. Select Program</h2>
+
+      <div class="accordion open">
+        <button class="accordion-head" onclick="toggleAccordion(this)">
+          <div>
+            <strong>Discovery Programs (29)</strong>
+            <small>Open only to KIOSC partner schools</small>
+          </div>
+          <span>⌃</span>
+        </button>
+
+        <div class="accordion-body">
+          <div class="program-grid">
+
+            <label class="program-card">
+              <input type="radio" name="program">
+              <img src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&w=700&q=80">
+              <p>Discovery: 3D Design Merge</p>
+            </label>
+
+            <label class="program-card">
+              <input type="radio" name="program">
+              <img src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&w=700&q=80">
+              <p>Discovery: Aspirin Analysis</p>
+            </label>
+
+            <label class="program-card">
+              <input type="radio" name="program">
+              <img src="https://images.unsplash.com/photo-1532094349884-543bc11b234d?auto=format&fit=crop&w=700&q=80">
+              <p>Discovery: Bioplastics</p>
+            </label>
+
+            <label class="program-card">
+              <input type="radio" name="program">
+              <img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=700&q=80">
+              <p>Discovery: Build Beyond Trades</p>
+            </label>
+
+            <label class="program-card">
+              <input type="radio" name="program">
+              <img src="https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?auto=format&fit=crop&w=700&q=80">
+              <p>Discovery: Drones on Mars</p>
+            </label>
+
+            <label class="program-card">
+              <input type="radio" name="program">
+              <img src="https://images.unsplash.com/photo-1581093588401-fbb62a02f120?auto=format&fit=crop&w=700&q=80">
+              <p>Discovery: Emergency Technology</p>
+            </label>
+
+            <label class="program-card">
+              <input type="radio" name="program">
+              <img src="https://images.unsplash.com/photo-1579154204601-01588f351e67?auto=format&fit=crop&w=700&q=80">
+              <p>Discovery: Forensics Science</p>
+            </label>
+
+            <label class="program-card">
+              <input type="radio" name="program">
+              <img src="https://images.unsplash.com/photo-1576086213369-97a306d36557?auto=format&fit=crop&w=700&q=80">
+              <p>Discovery: Genetics and Microarrays</p>
+            </label>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion">
+        <button class="accordion-head" onclick="toggleAccordion(this)">
+          <div>
+            <strong>VCE Masterclasses (10)</strong>
+            <small>Open to all schools</small>
+          </div>
+          <span>⌄</span>
+        </button>
+
+        <div class="accordion-body">
+          <div class="program-grid">
+            <label class="program-card">
+              <input type="radio" name="program">
+              <img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=700&q=80">
+              <p>VCE Biology Unit 3</p>
+            </label>
+
+            <label class="program-card">
+              <input type="radio" name="program">
+              <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=700&q=80">
+              <p>VCE Chemistry Unit 4</p>
+            </label>
+          </div>
+        </div>
+      </div>
+
+      <div class="btn-row">
+        <button onclick="nextStep(2)" class="next-btn">Next</button>
+      </div>
+    </section>
+
+    <!-- STEP 2 -->
+    <section id="step2" class="form-step">
+      <h2>2. Booking Details</h2>
+      <hr>
+
+      <div class="form-grid">
+        <div class="field">
+          <label>Requested Date <span>*</span></label>
+          <input id="bookingDate" type="date">
+        </div>
+
+        <div class="field">
+          <label>Requested Time <span>*</span></label>
+          <select id="bookingTime">
+            <option value="">Select requested time</option>
+            <option>Morning</option>
+            <option>Afternoon</option>
+            <option>Full Day</option>
+          </select>
+        </div>
+
+        <p class="small-note">Recommended Maximum Students: 75 students per day</p>
+
+        <div class="field">
+          <label>Number of Students <span>*</span></label>
+          <input id="students" type="number" placeholder="Number of Students">
+        </div>
+
+        <div class="field">
+          <label>Number of Classes <span>*</span></label>
+          <input id="classes" type="number" placeholder="Number of Classes">
+        </div>
+      </div>
+
+      <div class="year-levels">
+        <label>Year Levels Attending <span>*</span></label>
+        <label><input class="year-level-option" type="checkbox" value="Year 5"> Year 5</label>
+        <label><input class="year-level-option" type="checkbox" value="Year 6"> Year 6</label>
+        <label><input class="year-level-option" type="checkbox" value="Year 7"> Year 7</label>
+        <label><input class="year-level-option" type="checkbox" value="Year 8"> Year 8</label>
+        <label><input class="year-level-option" type="checkbox" value="Year 9"> Year 9</label>
+        <label><input class="year-level-option" type="checkbox" value="Year 10"> Year 10</label>
+        <label><input class="year-level-option" type="checkbox" value="Year 11"> Year 11</label>
+        <label><input class="year-level-option" type="checkbox" value="Year 12"> Year 12</label>
+      </div>
+
+      <div class="btn-row between">
+        <button onclick="nextStep(1)" class="back-btn">Previous</button>
+        <button onclick="nextStep(3)" class="next-btn">Next</button>
+      </div>
+    </section>
+
+    <!-- STEP 3 -->
+    <section id="step3" class="form-step">
+      <h2>3. School / Organisation</h2>
+      <hr>
+
+      <div class="partner-question">
+        <label>Are you booking for a KIOSC partner school? <span>*</span></label>
+        <label><input type="radio" name="partner"> Yes</label>
+        <label><input type="radio" name="partner"> No</label>
+      </div>
+
+      <div class="form-grid">
+        <div class="field">
+          <label>School / Organisation Name <span>*</span></label>
+          <input id="schoolName" type="text" placeholder="School or Organisation Name">
+        </div>
+
+        <div class="field">
+          <label>Partner School?</label>
+          <select id="partnerSchool">
+            <option value="">Select option</option>
+            <option>Yes</option>
+            <option>No</option>
+          </select>
+        </div>
+      </div>
+
+      <h3 class="sub-heading">Address</h3>
+
+      <div class="form-grid">
+        <div class="field">
+          <label>Address Line 1 <span>*</span></label>
+          <input id="addressLine1" type="text" placeholder="Address Line 1">
+        </div>
+
+        <div class="field">
+          <label>Address Line 2</label>
+          <input type="text" placeholder="Address Line 2">
+        </div>
+
+        <div class="field">
+          <label>Suburb <span>*</span></label>
+          <input type="text" placeholder="Suburb">
+        </div>
+
+        <div class="field">
+          <label>Postcode <span>*</span></label>
+          <input type="text" placeholder="Postcode">
+        </div>
+      </div>
+
+      <div class="btn-row between">
+        <button onclick="nextStep(2)" class="back-btn">Previous</button>
+        <button onclick="nextStep(4)" class="next-btn">Next</button>
+      </div>
+    </section>
+
+    <!-- STEP 4 -->
+    <section id="step4" class="form-step">
+      <h2>4. Contact Details</h2>
+      <hr>
+
+      <div class="single-column">
+        <div class="field">
+          <label>Contact Name <span>*</span></label>
+          <input id="contactName" type="text" placeholder="Contact Name">
+        </div>
+
+        <div class="field">
+          <label>Position <span>*</span></label>
+          <input id="position" type="text" placeholder="Position">
+        </div>
+
+        <div class="field">
+          <label>Email Address <span>*</span></label>
+          <input id="email" type="email" placeholder="Email Address">
+        </div>
+
+        <div class="field">
+          <label>Phone <span>*</span></label>
+          <div class="phone-box">
+            <span>🇦🇺</span>
+            <input id="phone" type="tel" placeholder="Phone">
+          </div>
+        </div>
+      </div>
+
+      <div class="btn-row between">
+        <button onclick="nextStep(3)" class="back-btn">Previous</button>
+        <button onclick="nextStep(5)" class="next-btn">Next</button>
+      </div>
+    </section>
+
+    <!-- STEP 5 -->
+    <section id="step5" class="form-step">
+      <h2>5. Message (Optional)</h2>
+      <hr>
+
+      <div class="single-column">
+        <div class="field">
+          <label>Message (Optional)</label>
+          <textarea id="message" placeholder="Please type your message here (optional)"></textarea>
+        </div>
+      </div>
+
+      <div id="submissionStatus" class="submission-status"></div>
+
+      <div class="btn-row between">
+        <button onclick="nextStep(4)" class="back-btn">Previous</button>
+        <button onclick="submitForm()" class="next-btn">Submit Form</button>
+      </div>
+    </section>
+
+  </section>
+</main>
+
+<div class="breadcrumb-bar">
+  <span>Home</span> » <span>Book A Program</span>
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div>
+      <div class="footer-logo">KI<span></span>SC</div>
+      <p>KIOSC</p>
+      <p>STEM Discovery and Trade Training Centre</p>
+      <br>
+      <p>Swinburne University of Technology</p>
+      <p>Wantirna Campus - Building WK</p>
+      <p>369 Stud Road, Wantirna VIC 3152</p>
+      <br>
+      <p>Phone: 03 9210 1106</p>
+      <p>Email: kiosc@swin.edu.au</p>
+    </div>
+
+    <div>
+      <p><b>Home</b></p>
+      <p>About Us</p>
+      <p>Latest News</p>
+      <p>Privacy Policy</p>
+    </div>
+
+    <div>
+      <p><b>School Programs</b></p>
+      <p>Discovery Programs</p>
+      <p>VCE Masterclasses</p>
+      <p>STEM Enrichment Projects</p>
+    </div>
+
+    <div>
+      <p><b>Contact Us</b></p>
+      <p>Bookings</p>
+      <p>Book A Program</p>
+      <p>Book an Equipment Loan</p>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
