@@ -112,8 +112,6 @@ async function submitForm() {
     return;
   }
 
-  const bookingId = "KIOSC-" + Math.floor(100000 + Math.random() * 900000);
-
   const bookingData = {
   bookingId: bookingId,
   sessionDate: date,
