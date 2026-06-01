@@ -138,6 +138,7 @@ async function submitForm() {
     "Phone: " + phone + "\n" +
     "Message: " + (message || "No message provided")
 };
+
   setStatus("Submitting booking request...", "loading");
 
   try {
@@ -163,7 +164,7 @@ async function submitForm() {
     "The booking data has been sent to Power Automate.\n" +
     "Booking ID will be generated automatically in Power Apps."
     );
-    
+
   } catch (error) {
     console.error("Submission error:", error);
     setStatus("Submission failed. Please check the Power Automate flow URL and try again.", "error");
