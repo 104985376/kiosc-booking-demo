@@ -113,7 +113,6 @@ async function submitForm() {
   }
 
   const bookingData = {
-  bookingId: bookingId,
   sessionDate: date,
   school: schoolName,
   program: selectedProgram,
@@ -156,14 +155,15 @@ async function submitForm() {
     setStatus("Booking submitted successfully. Please check the Power Apps Bookings table.", "success");
 
     alert(
-      "Booking request submitted successfully!\n\n" +
-      "Booking ID: " + bookingId + "\n" +
-      "Program: " + selectedProgram + "\n" +
-      "School: " + schoolName + "\n" +
-      "Date: " + date + "\n" +
-      "Time: " + requestedTime + "\n\n" +
-      "The booking data has been sent to Power Automate."
+    "Booking request submitted successfully!\n\n" +
+    "Program: " + selectedProgram + "\n" +
+    "School: " + schoolName + "\n" +
+    "Date: " + date + "\n" +
+    "Time: " + requestedTime + "\n\n" +
+    "The booking data has been sent to Power Automate.\n" +
+    "Booking ID will be generated automatically in Power Apps."
     );
+    
   } catch (error) {
     console.error("Submission error:", error);
     setStatus("Submission failed. Please check the Power Automate flow URL and try again.", "error");
